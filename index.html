@@ -12,7 +12,9 @@
 <body>
     <h1>Northern Music Player</h1>
     <center>
-        <p id="info"></p>
+        <marquee scrollamount="2">
+            <p id="info"></p>
+        </marquee>
         <div class="player">
             <audio controls></audio>
             <div class="music-name"></div>
@@ -21,6 +23,19 @@
                 <button id="PlayButton" onclick="play()">&#9654;</button>
                 <button id="next" onclick="nextFunc()">>></button>
             </div>
+        </div>
+        <br>
+
+        <br>
+        <br>
+        <div class="OwnMusic">
+            <input type="file" id="CustomMusicFile">
+            <input type="url" placeholder="Custom url/path to the music/song file" title="Custom url/path to the music/song file" id="CustomMusicUrl">
+            <br>
+            <button onclick="UseCustomMusic()" id="AcceptCustomMusic">Use</button>
+            <br>
+            <button onclick="ChangeCustomMusicType()" id="ChangeCustomMusic">Open from file instead?</button>
+           
         </div>
     </center>
 </body>
