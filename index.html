@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Atkinson Hyperlegible' rel='stylesheet'>
+    <link rel="shortcut icon" href="Assets/favicon.ico" type="image/x-icon">
     <title>Northern Music Player</title>
 </head>
 <body>
+    <h1>Northern Music Player</h1>
     <center>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/h4DksvE_L4s?&autoplay=1&controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <p id="info"></p>
+        <div class="player">
+            <audio controls></audio>
+            <div class="music-name"></div>
+            <div class="music-controls">
+                <button id="previous" onclick="previousFunc()"><<</button>
+                <button id="PlayButton" onclick="play()">&#9654;</button>
+                <button id="next" onclick="nextFunc()">>></button>
+            </div>
+        </div>
     </center>
-
-    <p id="version">Version <a href="https://github.com/nikeedev/Northern_MusicPlayer/blob/main/UpdateLog.md">0.0.1</a> </p>
 </body>
 <script src="script.js"></script>
 </html>
