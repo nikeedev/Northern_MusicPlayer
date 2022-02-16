@@ -1,0 +1,12 @@
+html {
+
+}
+
+
+#version {
+    position: fixed;
+    bottom: 0px;
+    width: 50%;
+    right: 100px;
+    font-family: Consolas,monaco,monospace;
+}
