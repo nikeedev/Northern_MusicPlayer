@@ -11,7 +11,9 @@ CustomFile.style.display = "none";
 
 
 var CurrentNumberOfMusic = 0;
+
 var PressedPlay = false;
+
 var ListOfMusics = [
     "test.mp3",
     "https://samplelib.com/lib/preview/mp3/sample-15s.mp3",
