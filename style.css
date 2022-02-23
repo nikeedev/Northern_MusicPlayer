@@ -6,7 +6,8 @@ html {
 }
 
 .player {
-    padding: 265px 0;
+    margin: auto;
+    padding: 10px;
 }
 
 #PlayButton {
@@ -30,7 +31,19 @@ html {
 }
 
 .OwnMusic {
-    bottom: -100px;
-    right: 260px;
-    
+    top: 600px;
+    width: 250px;
+    height: auto;
+}
+.OwnMusic button {
+    right: 260px; 
+    background-color: white;
+    color: black;
+    border: 2px solid #5092cf;
+}
+.OwnMusic input {
+    right: 260px; 
+    background-color: white;
+    color: black;
+    border: 2px solid #5092cf;
 }

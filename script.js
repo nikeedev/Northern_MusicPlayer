@@ -3,11 +3,8 @@ var PlayButton = document.getElementById("PlayButton");
 var previous = document.getElementById("previous");
 var next = document.getElementById("next");
 var info = document.getElementById("info");
-var CustomUrl = document.getElementById("CustomMusicUrl");
-var CustomFile = document.getElementById("CustomMusicFile");
-var AcceptCustomMusic = document.getElementById("AcceptCustomMusic");
-var ChangeCustomMusic = document.getElementById("ChangeCustomMusic");
-CustomFile.style.display = "none";
+var CustomUrl = document.getElementById("CustomMusic");
+
 
 
 var CurrentNumberOfMusic = 0;
@@ -25,6 +22,7 @@ audio.src = ListOfMusics[CurrentNumberOfMusic];
 
 function play()
 {
+    
     if (!PressedPlay) {
         PlayButton.innerHTML = "I I";
         PressedPlay = true;
@@ -61,23 +59,9 @@ function nextFunc() {
 }
 
 
+/*** @type { HTMLInputElement } */
 function UseCustomMusic() {
     ListOfMusics.push(String(CustomUrl.value));
     audio.load();
-}
-
-
-function ChangeCustomMusicType() {
-    if (CustomUrl.style.display != "none") {
-        CustomUrl.style.display = "none";
-        CustomUrl.innerHTML = null;
-        CustomFile.style.display = "block";
-        ChangeCustomMusic.innerHTML = "Use from URL/path instead?"
-    }
-    else if (CustomUrl.style.display == "none") {
-        CustomUrl.style.display = "block";
-        CustomFile.innerHTML = null;
-        CustomFile.style.display = "None";
-        ChangeCustomMusic.innerHTML = "Open from file instead?"
-    }
+    audio.currentTime = 0;
 }
